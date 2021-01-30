@@ -130,9 +130,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2914304921832761548, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 922816885, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963421595, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: whatStopsMovement.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2916246719925025467, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_Layer
@@ -152,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2916246720380483682, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2916246720380483682, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -225,10 +229,10 @@ MonoBehaviour:
   movePoint: {fileID: 1627456104}
   whatStopsMovement:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 384
   whatIsPushable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!4 &321189725
 Transform:
   m_ObjectHideFlags: 0
@@ -327,36 +331,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &922816885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 922816886}
-  m_Layer: 7
-  m_Name: BoxMovePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &922816886
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922816885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1963421594}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627456103
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,30 +444,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1963421589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2916246720380483680, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
-  m_PrefabInstance: {fileID: 233047051}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1963421594 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2916246720380483682, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
-  m_PrefabInstance: {fileID: 233047051}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1963421595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963421589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180f3b9262a632e41a145bf4bc1f34ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  movePoint: {fileID: 922816886}
-  whatStopsMovement:
-    serializedVersion: 2
-    m_Bits: 256

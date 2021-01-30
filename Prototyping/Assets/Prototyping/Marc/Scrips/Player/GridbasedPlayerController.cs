@@ -7,8 +7,8 @@ public class GridbasedPlayerController : MonoBehaviour
     public float moveSpeed = 5;
     public Transform movePoint;
 
-    public LayerMask whatStopsMovement;
-    public LayerMask whatIsPushable;
+    [SerializeField]public LayerMask whatStopsMovement;
+    [SerializeField]public LayerMask whatIsPushable;
 
     float RayDistance = 1f;
     Vector2 movement;
@@ -27,7 +27,7 @@ public class GridbasedPlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (movement.x != 0f || movement.y != 0f)
         {
             LastDirektion = movement;
         }
@@ -38,16 +38,22 @@ public class GridbasedPlayerController : MonoBehaviour
         {
             if (Mathf.Abs(movement.x) == 1f)
             {
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, 0f, 0f), .2f, whatStopsMovement))
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, 0f, 0f), .2f, whatStopsMovement))
                 {
                     movePoint.position += new Vector3(movement.x, 0f, 0f);
                 }
-                else if (Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, 0f, 0f), .2f, whatIsPushable))
+                if (Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, 0f, 0f), .2f, whatIsPushable))
                 {
                     RaycastHit2D hit = Physics2D.Raycast(transform.position, LastDirektion * transform.localScale.x, RayDistance, whatIsPushable);
+                    if(hit)
+                    {
                     box = hit.collider.gameObject;
-
                     box.GetComponent<BoxKicking>().MoveBoxHorizontal(movement.x);
+                    }
+                    else
+                    {
+                        Debug.Log("target not found");
+                    }
                 }
             }
             else if (Mathf.Abs(movement.y) == 1f)
@@ -56,13 +62,18 @@ public class GridbasedPlayerController : MonoBehaviour
                 {
                     movePoint.position += new Vector3(0f, movement.y, 0f);
                 }
-                else if (Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.y, 0f, 0f), .2f, whatIsPushable))
+                if (Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, movement.y, 0f), .2f, whatIsPushable))
                 {
-                    Debug.Log("Hello");
                     RaycastHit2D hit = Physics2D.Raycast(transform.position, LastDirektion * transform.localScale.x, RayDistance, whatIsPushable);
-                    box = hit.collider.gameObject;
-
-                    box.GetComponent<BoxKicking>().MoveBoxVertical(movement.y);
+                    if (hit)
+                    {
+                        box = hit.collider.gameObject;
+                        box.GetComponent<BoxKicking>().MoveBoxVertical(movement.y);
+                    }
+                    else
+                    {
+                        Debug.Log("target not found");
+                    }
                 }
             }
         }

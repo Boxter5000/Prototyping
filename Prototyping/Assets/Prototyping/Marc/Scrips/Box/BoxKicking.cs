@@ -14,9 +14,13 @@ public class BoxKicking : MonoBehaviour
         movePoint.parent = null;
     }
 
-    public void MoveBoxHorizontal(float direktion)
+    private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
+    }
+
+    public void MoveBoxHorizontal(float direktion)
+    {
 
         if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
         {
