@@ -6,44 +6,47 @@ public class SlimeMovement : MonoBehaviour
 {
     public float moveSpeed = 5;
     public Transform movePoint;
-
-    public float MoveDirektionHorizontal;               // 1 if you the Enemy to move Horitontal 
-    public float MoveDirektionVertical;                 // 1 if you want the enemy to move vertical
+    public float MoveDirektionX;               // 1 if you the Enemy to move Horitontal 
+    public float MoveDirektionY;                 // 1 if you want the enemy to move vertical
     public LayerMask whatStopsMovement;
+
+    Vector2 movement;
+    Vector2 LastDirektion;
 
     void Start()
     {
         movePoint.parent = null;
     }
-    
+
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
+        if (movement.x != 0f || movement.y != 0f)
         {
-            if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(MoveDirektionHorizontal, MoveDirektionVertical, 0f), .2f, whatStopsMovement))
-            {
-                movePoint.position += new Vector3(MoveDirektionHorizontal, MoveDirektionVertical, 0f);
-
-                MoveDirektionHorizontal *= -1;
-                MoveDirektionVertical *= -1;
-            }
+            LastDirektion = movement;
+            MoveSlime();
         }
     }
 
-    public void MoveEnemy()
+    public void MoveSlime()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
+        if (LastDirektion.x != 0f || LastDirektion.y != 0f)
         {
-            if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(MoveDirektionHorizontal, MoveDirektionVertical, 0f), .2f, whatStopsMovement))
+            if (Vector3.Distance(transform.position, movePoint.position) <= 0f)
             {
-                movePoint.position += new Vector3(MoveDirektionHorizontal, MoveDirektionVertical, 0f);
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(MoveDirektionX, MoveDirektionY, 0f), .2f, whatStopsMovement))
+                {
+                    LastDirektion.x = 0f;
+                    LastDirektion.y = 0f;
 
-                MoveDirektionHorizontal *= -1;
-                MoveDirektionVertical *= -1;
+                    movePoint.position += new Vector3(MoveDirektionX, MoveDirektionY, 0f);
+
+                    MoveDirektionX *= -1;
+                    MoveDirektionY *= -1;
+                }
             }
         }
     }

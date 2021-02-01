@@ -210,4 +210,4 @@ MonoBehaviour:
   movePoint: {fileID: 1693051213446789218}
   whatStopsMovement:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
