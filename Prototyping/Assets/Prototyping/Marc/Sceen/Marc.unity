@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8467221385544285125, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8876680229340074776, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_Name
       value: Box (Pushable)

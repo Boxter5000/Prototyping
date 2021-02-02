@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Prototyping/Marc/Sceen/Marc.unity
+- path: Assets/Scenes/MainSceen.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

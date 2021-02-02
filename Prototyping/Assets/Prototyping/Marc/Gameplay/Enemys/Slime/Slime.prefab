@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7671367969479578895}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   movePoint: {fileID: 7671367969485139253}
-  MoveDirektionX: 1
-  MoveDirektionY: 0
+  MoveDirektionX: 0
+  MoveDirektionY: 1
   whatStopsMovement:
     serializedVersion: 2
     m_Bits: 384
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 7671367969485139252}
   m_Layer: 8
   m_Name: SlimeMovePoint
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
