@@ -53,6 +53,7 @@ MonoBehaviour:
   whatIsPushable:
     serializedVersion: 2
     m_Bits: 128
+  LastPlayerMoves: []
 --- !u!1 &222171170585693093
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +79,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222171170585693093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222171169965782480}
@@ -124,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a1a15b8f44df5c24a948f669e0632c87, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32a1077b76e713b44ac3efdedb444586, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
