@@ -10,8 +10,8 @@ public class SlimeMovement : MonoBehaviour
     public float MoveDirektionY;                 // 1 if you want the enemy to move vertical
     public float moves;
     public LayerMask whatStopsMovement;
+    public float movesLeft;
 
-    float movesLeft;
     Vector2 movement;
     Vector2 LastDirektion;
     public List<Vector3> LastEnemyMove;
@@ -19,9 +19,13 @@ public class SlimeMovement : MonoBehaviour
     void Start()
     {
         movePoint.parent = null;
-        movesLeft = moves;
 
         LastEnemyMove = new List<Vector3>();
+
+        if(movesLeft == 0)
+        {
+            movesLeft = moves;
+        }
     }
 
     void Update()
@@ -57,10 +61,16 @@ public class SlimeMovement : MonoBehaviour
                     SaveMove();
                     if (movesLeft <= 0)
                     {
+                        MoveDirektionX *= -1;
+                        MoveDirektionY *= -1;
+                        movesLeft += moves;
+                    }
+                }
+                else
+                {
                     MoveDirektionX *= -1;
                     MoveDirektionY *= -1;
-                        movesLeft = moves;
-                    }
+                    movesLeft += moves;
                 }
             }
         }

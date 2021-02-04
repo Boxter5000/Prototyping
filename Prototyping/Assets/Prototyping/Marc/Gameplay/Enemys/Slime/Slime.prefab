@@ -50,9 +50,12 @@ MonoBehaviour:
   movePoint: {fileID: 7671367969485139253}
   MoveDirektionX: 1
   MoveDirektionY: 0
+  moves: 0
   whatStopsMovement:
     serializedVersion: 2
     m_Bits: 384
+  movesLeft: 0
+  LastEnemyMove: []
 --- !u!58 &8436312938511385468
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -81,7 +84,7 @@ GameObject:
   m_Layer: 0
   m_Name: SlimeMovePoint
   m_TagString: Enemy
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
