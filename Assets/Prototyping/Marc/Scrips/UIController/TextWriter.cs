@@ -121,7 +121,5 @@ public class TextWriter : MonoBehaviour
             characterIndex = textToWrite.Length;
             TextWriter.RemoveWriter_Static(uiText);
         }
-
-
     }
 }

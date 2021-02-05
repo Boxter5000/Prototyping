@@ -36,6 +36,10 @@ public class SlimeMovement : MonoBehaviour
 
         if (movement.x != 0f || movement.y != 0f)
         {
+
+        }
+        if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+        {
             LastDirektion = movement;
             MoveSlime();
         }

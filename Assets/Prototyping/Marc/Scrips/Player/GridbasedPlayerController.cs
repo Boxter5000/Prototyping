@@ -35,6 +35,10 @@ public class GridbasedPlayerController : MonoBehaviour
         //if any move button is pressed, remember the last direktion for the Raycast
         if (movement.x != 0f || movement.y != 0f)
         {
+
+        }
+        if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+        {
             LastDirektion = movement;
             MovePlayer();
         }
