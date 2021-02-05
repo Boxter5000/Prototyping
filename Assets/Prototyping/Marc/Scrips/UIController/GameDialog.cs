@@ -29,12 +29,12 @@ public class GameDialog : MonoBehaviour
                     case 0:
                         string[] messagesArray_0 = new string[]
                         {
-                            "Ouch, what happend?",
+                            "Ouch, what happened?",
                             "Where are we?",
-                            "I can not remember we got into a Dark Forrest.",
-                            "We shoud try to get out of here. This is scary",
-                            "You can move with W, A, S, D, or with your Arrow Keys",
-                            "or Return one move with the R button"
+                            "I can not remember how we got into a dark forrest.",
+                            "We shoud try to get out of here. This is kinda scary...",
+                            "You can move with W, A, S, D, or with the Arrow Keys",
+                            "or return one move with the R button"
                         };
                         if (counter < messagesArray_0.Length)
                         {
@@ -52,9 +52,9 @@ public class GameDialog : MonoBehaviour
                     case 1:
                     string[] messagesArray_1 = new string[]
                     {
-                        "Look at this Rock there.",
-                        "It loocks like it is moveable.",
-                        "try walking agenst it, maby you can push it."
+                        "Look at the rock right in front of you.",
+                        "It looks like it is moveable.",
+                        "Try walking against it, maybe you can push it."
                     };
                     if(counter < messagesArray_1.Length)
                     {
@@ -72,10 +72,10 @@ public class GameDialog : MonoBehaviour
                     case 2:
                         string[] messagesArray_2 = new string[]
                         {
-                            "That Log ther is blocking our Way.",
-                            "it loocks to heavy to just push it,",
-                            "but maby you can roll it away.",
-                            "Walk from the top or from the bottem agenst it to get it out of the way."
+                            "That log there is blocking our way.",
+                            "It looks too heavy to just push it away,",
+                            "but maybe you can roll it over.",
+                            "Walk from the top or the bottom against it to get it out of the way."
                         };
                         if (counter < messagesArray_2.Length)
                         {
@@ -94,9 +94,9 @@ public class GameDialog : MonoBehaviour
                         string[] messagesArray_3 = new string[]
                         {
                             "Watch out!",
-                            "There is a Slime gurding that candy",
-                            "I dont know for what we need candy here in that Forest but you can collect it",
-                            "because why not"
+                            "There is a slime guarding something..",
+                            "I think it is candy! I dont know why it is there but you can collect it,",
+                            "because why not."
                         };
                         if (counter < messagesArray_3.Length)
                         {
@@ -114,8 +114,8 @@ public class GameDialog : MonoBehaviour
                     case 4:
                         string[] messagesArray_4 = new string[]
                         {
-                            "Look up There, more Monster!",
-                            "Watch out for them, dont let them get you."
+                            "Look up there, more monsters!",
+                            "Watch out, dont let them get you."
                         };
                         if (counter < messagesArray_4.Length)
                         {
@@ -133,8 +133,8 @@ public class GameDialog : MonoBehaviour
                     case 5:
                         string[] messagesArray_5 = new string[]
                         {
-                            "Well, ok",
-                            "Nothing Happend.",
+                            "Well, ok.",
+                            "Nothing happened.",
                             "Lets just move on."
                         };
                         if (counter < messagesArray_5.Length)
@@ -154,7 +154,7 @@ public class GameDialog : MonoBehaviour
                         string[] messagesArray_6 = new string[]
                         {
                             "Why do you even bother picking them up,",
-                            "Lets just get out of that dam Forrest."
+                            "Lets just get out of that damn forrest."
                         };
                         if (counter < messagesArray_6.Length)
                         {
