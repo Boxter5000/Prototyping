@@ -52,14 +52,11 @@ public class BoxKicking : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collidet");
-        if(collision.gameObject.tag == "Enemy")
-        {
-        movePoint.position = LastBoxMoves[LastBoxMoves.Count - 1];
-        }
-    }*/
+
+        movePoint.position = LastBoxMoves[LastBoxMoves.Count - 2];
+    }
 
     public void ReturnToLastPosition()
     {
