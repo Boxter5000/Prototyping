@@ -901,7 +901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9079689273915468212, guid: 148e34693c1e11f42aad4c21d72f0bf1, type: 3}
       propertyPath: LoadSceenIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148e34693c1e11f42aad4c21d72f0bf1, type: 3}
