@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,18 +16,18 @@ public class TextWriter : MonoBehaviour
         textWriterSingleList = new List<TextWriterSingle>();
     }
 
-    public static TextWriterSingle AddWriter_Static(Text uiText, string textToWrite, float timePerCharakter, bool invisibleCharacter, bool removeWriterBeforeAdd)
+    public static TextWriterSingle AddWriter_Static(Text uiText, string textToWrite, float timePerCharakter, bool invisibleCharacter, bool removeWriterBeforeAdd, Action OnComplete)
     {
         if (removeWriterBeforeAdd)
         {
             instance.RemoveWriter(uiText);
         }
-        return instance.AddWriter(uiText, textToWrite, timePerCharakter, invisibleCharacter);
+        return instance.AddWriter(uiText, textToWrite, timePerCharakter, invisibleCharacter, OnComplete);
     }
 
-    private TextWriterSingle AddWriter(Text uiText, string textToWrite, float timePerCharakter, bool invisibleCharacter)
+    private TextWriterSingle AddWriter(Text uiText, string textToWrite, float timePerCharakter, bool invisibleCharacter, Action OnComplete)
     {
-        TextWriterSingle textWriterSingle = new TextWriterSingle(uiText, textToWrite, timePerCharakter, invisibleCharacter);
+        TextWriterSingle textWriterSingle = new TextWriterSingle(uiText, textToWrite, timePerCharakter, invisibleCharacter, OnComplete);
         textWriterSingleList.Add(textWriterSingle);
         return textWriterSingle;
     }
@@ -70,13 +71,15 @@ public class TextWriter : MonoBehaviour
         private float timePerCharakter;
         private float timer;
         private bool invisibleCharacter;
+        private Action OnComplete;
 
-        public TextWriterSingle(Text uiText, string textToWrite, float timePerCharakter, bool invisibleCharacter)
+        public TextWriterSingle(Text uiText, string textToWrite, float timePerCharakter, bool invisibleCharacter, Action OnComplete)
         {
             this.uiText = uiText;
             this.textToWrite = textToWrite;
             this.timePerCharakter = timePerCharakter;
             this.invisibleCharacter = invisibleCharacter;
+            this.OnComplete = OnComplete;
             characterIndex = 0;
         }
 
@@ -98,6 +101,7 @@ public class TextWriter : MonoBehaviour
 
                     if (characterIndex >= textToWrite.Length)
                     {
+                    if (OnComplete != null) OnComplete();
                         return true;
                     }
                 }
@@ -119,6 +123,7 @@ public class TextWriter : MonoBehaviour
         {
             uiText.text = textToWrite;
             characterIndex = textToWrite.Length;
+            if (OnComplete != null) OnComplete();
             TextWriter.RemoveWriter_Static(uiText);
         }
     }

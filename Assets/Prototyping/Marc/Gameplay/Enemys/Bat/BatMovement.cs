@@ -40,7 +40,7 @@ public class BatMovement : MonoBehaviour
         if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
         {
             LastDirektion = movement;
-            MoveSlime();
+            MoveBat();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -48,7 +48,7 @@ public class BatMovement : MonoBehaviour
         }
     }
 
-    public void MoveSlime()
+    public void MoveBat()
     {
         if (movesLeft <= 0)
         {
