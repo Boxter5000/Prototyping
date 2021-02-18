@@ -39,6 +39,12 @@ public class UIController : MonoBehaviour
     public void NewScene()
     {
         CoolecktetintheScene = false;
+        gameObject.SetActive(true);
+    }
+
+    public void OpenMenu()
+    {
+
     }
 
     private void Update()

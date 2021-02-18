@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
+    private UIController uiController;
+    private void Awake()
+    {
+        uiController = FindObjectOfType<UIController>();
+    }
+
     public void Return()
     {
         gameObject.SetActive(false);
     }
     public void MainMenu()
     {
+        gameObject.SetActive(false);
+        uiController.OpenMenu();
         SceneManager.LoadScene("MainMenu");
     }
     public void Quit()
