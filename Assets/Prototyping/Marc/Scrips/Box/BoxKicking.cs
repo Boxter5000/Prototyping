@@ -25,10 +25,6 @@ public class BoxKicking : MonoBehaviour
         {
             UpdateBoxPosition();
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReturnToLastPosition();
-        }
     }
 
     public void MoveBoxHorizontal(float direktion)

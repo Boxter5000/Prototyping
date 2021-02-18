@@ -35,7 +35,7 @@ public class GridbasedPlayerController : MonoBehaviour
         //if any move button is pressed, remember the last direktion for the Raycast
         if (movement.x != 0f || movement.y != 0f)
         {
-
+            SaveMove();
         }
         if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
         {
@@ -44,7 +44,7 @@ public class GridbasedPlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ReturnOneMove();
+            RestartLevel();
         }
 
         //try to move to the Movepoint
@@ -114,6 +114,12 @@ public class GridbasedPlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void RestartLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     private void ReturnOneMove()

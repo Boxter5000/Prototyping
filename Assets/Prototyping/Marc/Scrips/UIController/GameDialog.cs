@@ -25,6 +25,14 @@ public class GameDialog : MonoBehaviour
         };
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            PlayDialogue();
+        }
+    }
+
     public void PlayDialogue()
     {
         if (textWriterSingle != null && textWriterSingle.IsActive())
@@ -43,7 +51,7 @@ public class GameDialog : MonoBehaviour
                             "I can not remember how we got into a dark forrest.",
                             "We shoud try to get out of here. This is kinda scary...",
                             "You can move with W, A, S, D, or with the Arrow Keys",
-                            "or return one move with the R button"
+                            "or return your move with the R button"
                     };
                     if (counter < messagesArray_0.Length)
                     {

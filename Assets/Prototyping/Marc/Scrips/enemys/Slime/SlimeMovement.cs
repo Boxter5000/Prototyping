@@ -39,10 +39,6 @@ public class SlimeMovement : MonoBehaviour
             LastDirektion = movement;
             MoveSlime();
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReturnToLastPosition();
-        }
     }
 
     public void MoveSlime()
@@ -70,7 +66,7 @@ public class SlimeMovement : MonoBehaviour
                 {
                     MoveDirektionX *= -1;
                     MoveDirektionY *= -1;
-                    movesLeft += moves;
+                    movesLeft = moves - movesLeft;
                 }
             }
         }
