@@ -336,6 +336,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1941570834}
     m_Modifications:
+    - target: {fileID: 4157140531972948198, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21b75ee2714ee3c49b618d78f62b5185, type: 3}
     - target: {fileID: 6197488943573080600, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -659,6 +663,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1941570834}
     m_Modifications:
+    - target: {fileID: 4157140531972948198, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21b75ee2714ee3c49b618d78f62b5185, type: 3}
     - target: {fileID: 6197488943573080600, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -863,6 +871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7671367971190278970, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c4b3d6265c17444a9f8bca1a6dd559f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
 --- !u!1 &502862845
@@ -1018,6 +1030,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222171169965782480, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 222171169965782480, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 222171169965782480, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
@@ -1063,6 +1079,10 @@ PrefabInstance:
     - target: {fileID: 222171169965782486, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
       propertyPath: m_Name
       value: PlayerGridBased
+      objectReference: {fileID: 0}
+    - target: {fileID: 222171170585693092, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
@@ -1227,6 +1247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1941570834}
     m_Modifications:
+    - target: {fileID: 4157140531972948198, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21b75ee2714ee3c49b618d78f62b5185, type: 3}
     - target: {fileID: 6197488943573080600, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3829,7 +3853,7 @@ PrefabInstance:
     - target: {fileID: 1250084632244957104, guid: a296b420d6752cf42856d712d2b0c7ff, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5186868348522247143, guid: b818aeac23702284083ce49754510532, type: 3}
+      objectReference: {fileID: 8284432673562113715, guid: b818aeac23702284083ce49754510532, type: 3}
     - target: {fileID: 1250084634156112513, guid: a296b420d6752cf42856d712d2b0c7ff, type: 3}
       propertyPath: m_Name
       value: GummiBear_1
@@ -4164,6 +4188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7671367971190278970, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c4b3d6265c17444a9f8bca1a6dd559f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
 --- !u!4 &1482496283 stripped
@@ -4730,6 +4758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 7671367971190278970, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c4b3d6265c17444a9f8bca1a6dd559f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
 --- !u!1 &1797244878
@@ -4855,6 +4887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7671367971190278970, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c4b3d6265c17444a9f8bca1a6dd559f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
 --- !u!1001 &1854163369
@@ -5042,7 +5078,7 @@ Transform:
   - {fileID: 1482496283}
   - {fileID: 1139590454}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1954276515
 GameObject:
@@ -5189,6 +5225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7671367971190278970, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c4b3d6265c17444a9f8bca1a6dd559f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d51a5c0f2f42b4d84bc8ec995c3e48, type: 3}
 --- !u!1 &2050547161
@@ -5280,6 +5320,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1941570834}
     m_Modifications:
+    - target: {fileID: 4157140531972948198, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21b75ee2714ee3c49b618d78f62b5185, type: 3}
     - target: {fileID: 6197488943573080600, guid: f5bdbfa9d39a6e446964f780c250a01e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5429,7 +5473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2171501772299069955, guid: 8a04a6d71296c5f47ad18b4baeeafe12, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2171501772299069955, guid: 8a04a6d71296c5f47ad18b4baeeafe12, type: 3}
       propertyPath: m_AnchorMax.x
