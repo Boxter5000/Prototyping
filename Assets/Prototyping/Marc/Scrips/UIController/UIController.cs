@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     public Text gummyBearText;
 
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Gummibear")
@@ -23,4 +24,11 @@ public class UIController : MonoBehaviour
         gummyBearText.text = gummyBearCount.ToString();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            transform.Find("GameMenu").GetComponent<GameMenu>().Open();
+        }
+    }
 }
