@@ -7,8 +7,12 @@ public class UIController : MonoBehaviour
 {
     public float gummyBearCount;
     public Text gummyBearText;
+    public bool CoolecktetintheScene;
 
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);       
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,7 +25,20 @@ public class UIController : MonoBehaviour
     public void UpdateGummyBear()
     {
         gummyBearCount++;
+        CoolecktetintheScene = true;
         gummyBearText.text = gummyBearCount.ToString();
+    }
+
+    public void GummiBearDecrease()
+    {
+        gummyBearCount--;
+        CoolecktetintheScene = false;
+        gummyBearText.text = gummyBearCount.ToString();
+    }
+
+    public void NewScene()
+    {
+        CoolecktetintheScene = false;
     }
 
     private void Update()

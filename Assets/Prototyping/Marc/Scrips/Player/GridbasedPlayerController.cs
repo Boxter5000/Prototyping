@@ -19,12 +19,15 @@ public class GridbasedPlayerController : MonoBehaviour
     Vector2 LastDirektion;
     GameObject box;
     int MoveCount;
+    UIController uIController;
 
     void Start()
     {
+        uIController = FindObjectOfType<UIController>();
         // split movepoint from Player / create list to remember moves
         movePoint.parent = null;
         LastPlayerMoves = new List<Vector3>();
+        uIController.NewScene();
     }
 
     void Update()
@@ -140,6 +143,10 @@ public class GridbasedPlayerController : MonoBehaviour
         Debug.Log("aua");
         if (collision.gameObject.tag == "Enemy")
         {
+            if (uIController.CoolecktetintheScene)
+            {
+                uIController.GummiBearDecrease();
+            }
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }

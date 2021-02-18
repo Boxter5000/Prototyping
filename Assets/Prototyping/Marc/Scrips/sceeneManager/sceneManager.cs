@@ -5,9 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
-    public int LoadSceenIndex;
+    private UIController uiController;
+    public string HappySceenName;
+    public string MediumSceenName;
+    public string DarkSceenName;
+
+    private void Awake()
+    {
+        uiController = FindObjectOfType<UIController>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(LoadSceenIndex);
+        if(uiController.gummyBearCount <= 1f)
+        {
+        SceneManager.LoadScene(HappySceenName);
+        }
+        if (uiController.gummyBearCount > 1f)
+        {
+            SceneManager.LoadScene(MediumSceenName);
+        }
+        if (uiController.gummyBearCount > 2f)
+        {
+            SceneManager.LoadScene(DarkSceenName);
+        }
     }
 }
