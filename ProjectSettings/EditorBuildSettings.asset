@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LVL3_2.unity
     guid: 9db134f5d9b57c746b6ff239e7d073b1
+  - enabled: 1
+    path: Assets/Scenes/Ending_Dark.unity
+    guid: c3c29a4430a15aa4b80dead687d6f802
+  - enabled: 1
+    path: Assets/Scenes/Ending_Happy.unity
+    guid: 48bbcc6e3bde42b43936af4222dbb5a9
   m_configObjects: {}

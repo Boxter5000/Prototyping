@@ -778,22 +778,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGridBased
       objectReference: {fileID: 0}
-    - target: {fileID: 222171169965782486, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 222171170585693092, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 222171170585693092, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 222171170585693092, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.96
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a979f446835ff144a5adae1cf62ff00, type: 3}
 --- !u!1001 &149406075560282206

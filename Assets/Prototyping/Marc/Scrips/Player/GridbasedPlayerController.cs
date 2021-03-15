@@ -20,10 +20,16 @@ public class GridbasedPlayerController : MonoBehaviour
     GameObject box;
     int MoveCount;
     UIController uIController;
+    AudioSource audioScource;
+
+    AudioClip currentAudio;
+    public AudioClip[] playsounds;
+
 
     void Start()
     {
         uIController = FindObjectOfType<UIController>();
+        audioScource = GetComponent<AudioSource>();
         // split movepoint from Player / create list to remember moves
         movePoint.parent = null;
         LastPlayerMoves = new List<Vector3>();
@@ -66,7 +72,16 @@ public class GridbasedPlayerController : MonoBehaviour
                 {
                     //save the move
                     SaveMove();
+
+                    currentAudio = playsounds[0];
+                    audioScource.PlayOneShot(currentAudio);
+
                     movePoint.position += new Vector3(movement.x, 0f, 0f);
+                }
+                else
+                {
+                    currentAudio = playsounds[2];
+                    audioScource.PlayOneShot(currentAudio);
                 }
 
                 //if the circle is detektng something that can be pushed, chast a ray to know what object it is
@@ -95,7 +110,14 @@ public class GridbasedPlayerController : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, movement.y, 0f), .2f, whatStopsMovement))
                 {
                     SaveMove();
+                    currentAudio = playsounds[0];
+                    audioScource.PlayOneShot(currentAudio);
                     movePoint.position += new Vector3(0f, movement.y, 0f);
+                }
+                else
+                {
+                    currentAudio = playsounds[2];
+                    audioScource.PlayOneShot(currentAudio);
                 }
                 if (Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, movement.y, 0f), .2f, whatIsPushable))
                 {
@@ -143,12 +165,12 @@ public class GridbasedPlayerController : MonoBehaviour
         Debug.Log("aua");
         if (collision.gameObject.tag == "Enemy")
         {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
             if (uIController.CoolecktetintheScene)
             {
                 uIController.GummiBearDecrease();
             }
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
         }
     }
 
